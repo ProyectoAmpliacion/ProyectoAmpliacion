@@ -28,6 +28,41 @@ Antes de comenzar, asegúrese de tener instalado:
 Para poner en marcha el entorno desde cero, siga estos comandos en su terminal:
 
 1. **Clonar el repositorio:**
-   ```bash
    git clone [https://github.com/ProyectoAmpliacion/ProyectoAmpliacion.git](https://github.com/ProyectoAmpliacion/ProyectoAmpliacion.git)
    cd ProyectoAmpliacion
+
+2. **Levantar el entorno:**
+   vagrant up
+   
+*Este comando creará la VM, instalará Docker y desplegará los contenedores automáticamente.
+
+3. **Acceso al sitio web:**
+   Una vez finalizado, abra su navegador en: http://localhost:8080
+
+
+## 🔄 Actualización del Contenido (Continuous Deployment)
+Para cumplir con el requisito de actualización rápida sin intervención manual:
+
+Realice cambios en el archivo index.php dentro de este repositorio de GitHub.
+En su terminal local, ejecute:
+
+   vagrant provision
+   
+Los cambios se reflejarán inmediatamente en el entorno de WordPress.
+
+
+## 📁 Estructura del Repositorio
+Vagrantfile: Configuración de la infraestructura virtual.
+
+docker-compose.yml: Definición de servicios (WordPress, DB y Git-Sync).
+
+web/: Directorio vinculado al volumen de WordPress donde se aloja el código.
+
+index.php: Página principal personalizada del proyecto.
+
+
+## 👥 Equipo de Desarrollo (WebFusion)
+Giulia Alisia Gherghin
+Marta Pérez García
+Laura Gema Moreno Llarena
+   
